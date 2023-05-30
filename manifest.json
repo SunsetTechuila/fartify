@@ -1,0 +1,9 @@
+[
+  {
+    "name": "Fartify",
+    "description": "Plays a fart (with reverb) sound on every mouse click",
+    "preview": "fartify.png",
+    "main": "fartify.js",
+    "readme": "README.md"
+  }
+]
