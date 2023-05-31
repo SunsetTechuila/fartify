@@ -1,6 +1,6 @@
 # Fartify
 
-![fartify-image](https://github.com/SunsetTechuila/fartify/assets/115353812/8a76fcc1-41f1-4ebb-aa74-ee891a5b934b)
+![fartify-image](https://github.com/SunsetTechuila/fartify/assets/115353812/cd7bac36-fbb8-48b0-a727-163cd40fd634)
 
 ## Pros:
 - Plays a fart (with reverb) sound
