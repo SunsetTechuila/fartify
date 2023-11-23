@@ -1,0 +1,53 @@
+name: Bug report
+description: Report errors or unexpected behavior
+labels: [bug]
+body:
+  - type: checkboxes
+    attributes:
+      label: Is there already an issue for your problem?
+      description: Please make sure you are not creating an already submitted <a href="https://github.com/SunseTechuila/spicetify-stuff/issues">issue</a>. Check closed issues as well.
+      options:
+        - label: I have checked older issues, open and closed
+          required: true
+
+  - type: textarea
+    attributes:
+      label: Environment & Computer Info
+      description: |
+        Please provide the these details:
+          - Custom app/extension name
+          - Spicetify && Spotify versions (the information is in the "About" window: Help -> About Spotify)
+          - Write where you got the Spotify app
+          - Write how you installed custom app/extension
+      value: |
+        - Custom app/extension name
+        - Spotify version:
+        - Installed from: (Windows Store, Spotify site, Flatpak, etc)
+        - Spicetify version:
+        - Custom App/Extension installed: (from Spicetify Marketplace/Manually)
+      placeholder: |
+        - Extension name: Imaged Folders
+        - Spotify version: for Windows (64 bit) 1.2.25.1011.g0348b2ea
+        - Installed from: Spotify site
+        - Spicetify version: v2.27.1
+        - Extension installed: from Spicetify Marketplace
+      render: Markdown
+    validations:
+      required: true
+
+  - type: textarea
+    attributes:
+      label: Description
+      description: |
+        List steps to reproduce the error and details on what happens and what you expected to happen.
+      placeholder: |
+        1. Please number your steps like so.
+        2. This helps readability of your instructions.
+        Feel free to write down additional notes you may want me to know.
+    validations:
+      required: true
+
+  - type: textarea
+    attributes:
+      label: Screenshots
+      description: Place any screenshots of the issue here if needed

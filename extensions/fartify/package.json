@@ -1,0 +1,12 @@
+{
+  "name": "fartify",
+  "private": true,
+  "scripts": {
+    "build": "spicetify-creator --out=../../dist --minify && copyfiles --up 1 ./src/assets/**/* ../../dist",
+    "build-local": "spicetify-creator",
+    "watch": "spicetify-creator --watch"
+  },
+  "devDependencies": {
+    "copyfiles": "^2.4.1"
+  }
+}

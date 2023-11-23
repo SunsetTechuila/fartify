@@ -1,0 +1,44 @@
+[
+  {
+    "name": "Imaged Folders",
+    "description": "Add images to your playlist folders!",
+    "preview": "/extensions/images-folders/assets/imaged-folders-1x1.png",
+    "main": "https://sunsettechuila.github.io/spicetify-stuff/imaged-folders.js",
+    "readme": "/extensions/images-folders/README.md",
+    "tags": ["folders", "icons"]
+  },
+  {
+    "name": "Seek On Scroll",
+    "description": "Skip track time using mouse wheel",
+    "main": "https://sunsettechuila.github.io/spicetify-stuff/seekonscroll.js",
+    "preview": "/extensions/seekonscroll/assets/preview-marketplace.gif",
+    "readme": "/extensions/seekonscroll/README.md",
+    "authors": [
+      {
+        "name": "SunsetTechuila",
+        "url": "https://github.com/SunsetTechuila"
+      },
+      {
+        "name": "Xyntho",
+        "url": "https://github.com/iamxyntho"
+      }
+    ],
+    "tags": ["utility", "scroll", "time"]
+  },
+  {
+    "name": "Fartify",
+    "description": "Plays a fart (with reverb) sound on every mouse click",
+    "preview": "/extensions/fartify/assets/fartify.png",
+    "main": "https://sunsettechuila.github.io/spicetify-stuff/fartify.js",
+    "readme": "/extensions/fartify/README.md",
+    "tags": ["fart", "meme", "sound"]
+  },
+  {
+    "name": "Hornify",
+    "description": "Replaces random words with random porn tags",
+    "preview": "/extensions/hornify/assets/hornify-1x1.png",
+    "main": "https://sunsettechuila.github.io/spicetify-stuff/hornify.js",
+    "readme": "/extensions/hornify/README.md",
+    "tags": ["explicit", "meme"]
+  }
+]

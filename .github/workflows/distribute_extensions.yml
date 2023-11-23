@@ -1,0 +1,52 @@
+name: Distribute Extensions
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - extensions/**
+  workflow_dispatch:
+
+jobs:
+  distribute_extensions:
+    env:
+      PUBLISH_BRANCH: dist
+      PUBLISH_DIR: ./dist/extensions
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout Project
+        uses: actions/checkout@v4
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v2
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version-file: ./.nvmrc
+          cache: pnpm
+          cache-dependency-path: ./pnpm-lock.yaml
+
+      - name: Install Dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Test
+        run: pnpm test-extensions
+
+      - name: Build
+        run: pnpm build-extensions
+
+      - name: Create Wrappers
+        run: pnpm create-wrappers
+
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          publish_branch: ${{ env.PUBLISH_BRANCH }}
+          publish_dir: ${{ env.PUBLISH_DIR }}
+          user_name: github-actions[bot]
+          user_email: github-actions[bot]@users.noreply.github.com
+          commit_message: "chore: update to"

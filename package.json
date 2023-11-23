@@ -1,0 +1,57 @@
+{
+  "name": "spicetify-stuff",
+  "private": true,
+  "packageManager": "pnpm@8.11.0",
+  "workspaces": [
+    "./extensions/*",
+    "./scripts"
+  ],
+  "config": {
+    "extensions-assets-url": "https://sunsettechuila.github.io/spicetify-stuff"
+  },
+  "engines": {
+    "yarn": "please-use-pnpm",
+    "npm": "please-use-pnpm",
+    "pnpm": ">=8",
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "pnpm -r build",
+    "build-local": "pnpm -r build-local",
+    "watch": "pnpm -r watch",
+    "build-extensions": "pnpm --filter ./extensions/* -r build",
+    "build-extensions-local": "pnpm --filter ./extensions/* -r build-local",
+    "watch-extensions": "pnpm --filter ./extensions/* -r watch",
+    "format": "prettier --write --cache .",
+    "format-check": "prettier --check --cache .",
+    "format-extensions": "prettier --write --cache ./extensions",
+    "format-extensions-check": "prettier --check --cache ./extensions",
+    "lint": "eslint . --cache",
+    "lint-fix": "eslint . --write --cache",
+    "lint-extensions": "eslint ./extensions --cache",
+    "lint-extensions-fix": "eslint ./extensions --write --cache",
+    "test": "pnpm format-check && pnpm lint",
+    "test-fix": "pnpm format && pnpm lint-fix",
+    "test-extensions": "pnpm format-extensions-check && pnpm lint-extensions",
+    "test-extensions-fix": "pnpm format-extensions && pnpm lint-extensions-fix",
+    "create-wrappers": "ts-node scripts/create-wrappers.ts",
+    "update-spicetify-types": "curl -s -o ./shared/types/spicetify.d.ts https://raw.githubusercontent.com/spicetify/spicetify-cli/master/globals.d.ts"
+  },
+  "devDependencies": {
+    "@types/react": "17.0.2",
+    "@types/react-dom": "17.0.2",
+    "@typescript-eslint/eslint-plugin": "^6.12.0",
+    "@typescript-eslint/parser": "^6.12.0",
+    "eslint": "^8.54.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-airbnb-typescript": "^17.1.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-import-resolver-typescript": "^3.6.1",
+    "eslint-plugin-import": "^2.29.0",
+    "eslint-plugin-react": "^7.33.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "prettier": "^3.1.0",
+    "spicetify-creator": "^1.0.16",
+    "typescript": "^5.3.2"
+  }
+}

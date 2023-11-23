@@ -1,0 +1,9 @@
+{
+  "name": "scripts",
+  "private": true,
+  "type": "module",
+  "devDependencies": {
+    "@types/node": "^20.10.0",
+    "ts-node": "^10.9.1"
+  }
+}
